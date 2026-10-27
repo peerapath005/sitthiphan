@@ -1,0 +1,73 @@
+/* ==========================================================
+   🎨 ไฟล์ตั้งค่าสีธีมหลังบ้าน (Theme Management Center)
+   ปรับแต่ง: โหมดมืด (ตัวหนังสือขาว) / โหมดสว่าง (ตัวหนังสือดำ)
+   ========================================================== */
+
+:root {
+    /* ☀️ สีในโหมดสว่าง (Light Mode: พื้นหลังขาว/เขียวอ่อน - ตัวหนังสือดำ) */
+    --bg-main: #f0fdf4;        /* สีพื้นหลังเว็บไซต์ */
+    --bg-card: #ffffff;        /* สีพื้นหลังการ์ด / กล่องเนื้อหา */
+    --text-main: #000000;      /* สีข้อความหลัก (ปรับเป็นสีดำสนิท อ่านง่ายในตอนเช้า) */
+    --text-muted: #374151;     /* สีข้อความรอง / คำอธิบาย (เทาเข้ม) */
+    --nav-bg: #065f46;         /* สีแถบเมนูด้านบน (เขียวเข้ม) */
+    --primary: #059669;        /* สีปุ่มหลัก */
+    --primary-hover: #047857;  /* สีปุ่มหลักเวลาเอาเมาส์ชี้ */
+    --accent: #10b981;         /* สีเน้น / ปุ่มเสริม */
+    --accent-hover: #059669;   /* สีเน้นเวลาเอาเมาส์ชี้ */
+    --border-color: #d1d5db;   /* สีเส้นขอบ */
+}
+
+html.dark {
+    /* 🌙 สีในโหมดมืด (Dark Mode: พื้นหลังดำ - ตัวหนังสือขาว) */
+    --bg-main: #0f172a;        /* สีพื้นหลังโหมดมืด (ดำเข้มทันสมัย) */
+    --bg-card: #1e293b;        /* สีพื้นหลังกล่องเนื้อหาโหมดมืด */
+    --text-main: #ffffff;      /* สีข้อความหลักโหมดมืด (ปรับเป็นสีขาวสว่าง) */
+    --text-muted: #94a3b8;     /* สีข้อความรองโหมดมืด (เทาอ่อน) */
+    --nav-bg: #020617;         /* สีแถบเมนูโหมดมืด */
+    --primary: #10b981;        /* สีปุ่มหลักโหมดมืด */
+    --primary-hover: #059669;  /* สีปุ่มหลักเวลาชี้ในโหมดมืด */
+    --accent: #34d399;         /* สีเน้นโหมดมืด */
+    --accent-hover: #10b981;   /* สีเน้นเวลาชี้ในโหมดมืด */
+    --border-color: #334155;   /* สีเส้นขอบโหมดมืด */
+}
+
+/* ==========================================================
+   🔗 คำสั่งผูก คลาส (Class) ให้ไปดึงสีจากตัวแปรด้านบนมาใช้
+   ========================================================== */
+body {
+    background-color: var(--bg-main) !important;
+    color: var(--text-main) !important;
+}
+
+.theme-nav {
+    background-color: var(--nav-bg) !important;
+}
+
+.theme-card {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border-color) !important;
+}
+
+.theme-btn-primary {
+    background-color: var(--primary) !important;
+    color: #ffffff !important;
+}
+.theme-btn-primary:hover {
+    background-color: var(--primary-hover) !important;
+}
+
+.theme-btn-accent {
+    background-color: var(--accent) !important;
+    color: #0f172a !important;
+}
+.theme-btn-accent:hover {
+    background-color: var(--accent-hover) !important;
+}
+
+.theme-text-accent {
+    color: var(--accent) !important;
+}
+
+.theme-text-muted {
+    color: var(--text-muted) !important;
+}
